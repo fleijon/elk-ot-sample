@@ -87,11 +87,11 @@ services:
     depends_on:
       - elasticsearch
 
-  aspnetcore-sample:
-    container_name: aspnetcore-server
+  aspnetweb-sample:
+    container_name: aspnetweb-server
     build:
       context: .
-      dockerfile: elk-telemetry-sample/Dockerfile
+      dockerfile: dotnet-webapp-sample-otelk/Dockerfile
     networks:
       - elastic
     depends_on:
